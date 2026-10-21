@@ -1,0 +1,134 @@
+.bgnull {
+  background-image: url("assets/emptyPage/bg.png");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: 128px;
+  animation: scrollBackground 2s linear infinite;
+}
+
+@font-face {
+    font-family: "CoolWebFont";
+    src: url(assets/font.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+	font-family: "CoolWebFont";
+	animation: zoomOut 1s ease-out forwards;
+	image-rendering: pixelated;
+	color: #eee;
+}
+
+@keyframes scrollBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 128px 128px;
+    }
+}
+
+.black-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0px 0px;
+  padding: 0 0;
+  background-color: black;
+  z-index: 9999;
+  pointer-events: none;
+  animation: fadeOut 1s ease-out forwards;
+}
+
+@keyframes bump {
+    from {
+        transform: scale(1.1)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+@keyframes zoomOut {
+    from {
+        transform: scale(2);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.animate-fade-in-top {
+    animation: fade-in-top 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+.animate-slide-from-left {
+	animation: slide-from-left 2s ease-out forwards;
+}
+.animate-slide-from-right {
+	animation: slide-from-right 2s ease-out forwards;
+}
+
+@keyframes fade-in-top {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(0px);
+    }
+}
+
+@keyframes slide-from-left {
+    0% {
+        opacity: 0;
+        transform: translate(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-25%);
+    }
+}
+
+@keyframes slide-from-right {
+    0% {
+        opacity: 0;
+        transform: translate(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(25%);
+    }
+}
+
+.btn {
+  padding: 12px 24px;
+  
+  font-size: 16px;
+  
+  background-color: #000;
+  color: white;
+  
+  border-color: #0F7;
+  border-radius: 8px;
+  border-width: 4px;
+  border-style: solid;
+  
+  cursor: pointer;
+}
+
+.b-text {
+	color: #111;
+}
